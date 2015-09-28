@@ -1,16 +1,28 @@
 import React from 'react';
-import Router from 'react-router';
+import { RouteHandler, Link } from 'react-router';
+import * as ReactBS from 'react-bootstrap';
 
 import 'client/assets/sass/app.scss';
+
 
 const ContainerLayout = React.createClass({
   render() {
     return (
       <div className='container'>
-        <Router.RouteHandler {...this.props} />
+        <Link to={`/`}><ReactBS.Button bsStyle="primary" bsSize="large" active>Home</ReactBS.Button></Link>
+        <Link to={`blog`}><ReactBS.Button bsStyle="primary" bsSize="large" active>Blog</ReactBS.Button></Link>
+        <Link to={`skills`}><ReactBS.Button bsStyle="primary" bsSize="large" active>Skills</ReactBS.Button></Link>
+        <Link to={`contact`}><ReactBS.Button bsStyle="primary" bsSize="large" active>Contact</ReactBS.Button></Link>
+        <Link to={`/`}><ReactBS.Button bsStyle="primary" bsSize="large" active>topsecret</ReactBS.Button></Link>
+
+    <RouteHandler {...this.props} />
       </div>
     );
   },
 });
+
+/*
+*/
+
 
 export default ContainerLayout;
