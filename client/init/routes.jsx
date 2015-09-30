@@ -10,6 +10,7 @@ import Blog from 'client/pages/blog';
 import ContactInfo from 'client/pages/contact';
 import Skills from 'client/pages/skills';
 import TopSecret from 'client/pages/topsecret';
+import ReactSkills from 'client/pages/reactskills'
 
 export default (
   <Route handler={ContainerLayout}>
@@ -18,5 +19,6 @@ export default (
     <Route name='contact' path='/contact' handler={ContactInfo} />
     <Route name='skills' path='/skills' handler={Skills} />
     <Route name='topsecret' path='/topsecret' handler={TopSecret} />
+    <Route name='reactskills' path='/reactskills' handler={ReactSkills} />
   </Route>
 );
