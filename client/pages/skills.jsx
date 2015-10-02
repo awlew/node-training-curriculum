@@ -10,13 +10,11 @@ const SkillsPage = React.createClass({
   render() {
     return (
       <div>
-        <h2 className='hello-world'>
+        <h2 className='hello-world' style={{textAlign: 'center'}}>
           Skills
         </h2>
         <ReactBS.ListGroup>
           <ReactBS.ListGroupItem onClick={alertClicked} href="https://react-bootstrap.github.io/components.html#listgroup">React</ReactBS.ListGroupItem>
-          </ReactBS.ListGroup>
-        <ReactBS.ListGroup>
             <ReactBS.ListGroupItem>Service and Object Oriented Programming(CSS, JS, C/C++, Java)</ReactBS.ListGroupItem>
             <ReactBS.ListGroupItem>Web Forms and Applications development</ReactBS.ListGroupItem>
             <ReactBS.ListGroupItem>Embedded Systems Programming</ReactBS.ListGroupItem>

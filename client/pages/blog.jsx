@@ -1,11 +1,12 @@
 import React from 'react';
 import * as ReactBS from 'react-bootstrap';
 
+
 const BlogPage = React.createClass({
   render() {
     return (
       <div>
-        <h1 className='Title'>
+        <h1 className='Title' style={{textAlign: 'center'}}>
           Blog
         </h1>
         <h4>
