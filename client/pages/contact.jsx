@@ -4,7 +4,7 @@ import * as ReactBS from 'react-bootstrap';
 const ContactPage = React.createClass({
 
   getInitialState: function() {
-      return {firstnameval: '' , lastnameval: '', emailval: '', phoneval: '', option: true,
+      return {firstname: '' , lastname: '', emailaddr: '', phoneno: '', option: true, contactPreference: 'Email',
         submitlbl: 'Fill out the form above, and I will contact you shortly.'
       };
     },
@@ -23,17 +23,19 @@ const ContactPage = React.createClass({
     },
 
     handleClick: function(event) {
-        this.setState({submitlbl: 'Thank you ' + this.state.firstnameval + ' ' + this.state.lastnameval +
-          ' for submitting, I will contact you shortly at ' + (this.state.option ?  this.state.emailval : this.state.phoneval) + '.'});
+        this.setState({submitlbl: 'Thank you ' + this.state.firstname + ' ' + this.state.lastname +
+          ' for submitting, I will contact you shortly at ' + (this.state.option ?  this.state.emailaddr : this.state.phoneno) + '.'});
       },
 
   render() {
-    var firstnameval = this.state.firstnameval;
-    var lastnameval = this.state.lastnameval;
-    var emailval = this.state.emailval;
-    var phoneval = this.state.phoneval;
+    var firstname = this.state.firstname;
+    var lastname = this.state.lastname;
+    var emailaddr = this.state.emailaddr;
+    var phoneno = this.state.phoneno;
     var submitlbl = this.state.submitlbl;
+    var contactPreference = this.state.contactPreference;
     var option = this.state.option;
+
     return (
 
 
@@ -52,7 +54,7 @@ const ContactPage = React.createClass({
                 <h4>Your First Name</h4>
             </ReactBS.Col>
             <ReactBS.Col xs={6} md={3}>
-              <input type="text" value={firstnameval} placeholder = "Enter your first name"  onChange={this.handleChange.bind(null, 'firstnameval')} />
+              <input type="text" value={firstname} placeholder = "Enter your first name"  onChange={this.handleChange.bind(null, 'firstname')} />
             </ReactBS.Col>
           </ReactBS.Row>
           <ReactBS.Row className='lnamerow'>
@@ -60,7 +62,7 @@ const ContactPage = React.createClass({
                 <h4>Your Last Name</h4>
             </ReactBS.Col>
             <ReactBS.Col xs={6} md={3}>
-              <input type="text" value={lastnameval} placeholder = "Enter your last name"  onChange={this.handleChange.bind(null, 'lastnameval')} />
+              <input type="text" value={lastname} placeholder = "Enter your last name"  onChange={this.handleChange.bind(null, 'lastname')} />
             </ReactBS.Col>
           </ReactBS.Row>
           <ReactBS.Row className='emailrow'>
@@ -68,7 +70,7 @@ const ContactPage = React.createClass({
                 <h4>Your Email</h4>
             </ReactBS.Col>
             <ReactBS.Col xs={6} md={3}>
-              <input type="text" value={emailval} placeholder = "address@email"  onChange={this.handleChange.bind(null, 'emailval')} />
+              <input type="text" value={emailaddr} placeholder = "address@email"  onChange={this.handleChange.bind(null, 'emailaddr')} />
             </ReactBS.Col>
           </ReactBS.Row>
           <ReactBS.Row className='phonerow'>
@@ -76,7 +78,7 @@ const ContactPage = React.createClass({
                 <h4>Your Phone Number</h4>
             </ReactBS.Col>
             <ReactBS.Col xs={6} md={3}>
-              <input type="text" value={phoneval} placeholder = "(XXX)-XXX-XXXX"  onChange={this.handleChange.bind(null, 'phoneval')} />
+              <input type="text" value={phoneno} placeholder = "(XXX)-XXX-XXXX"  onChange={this.handleChange.bind(null, 'phoneno')} />
             </ReactBS.Col>
           </ReactBS.Row>
 
@@ -85,7 +87,7 @@ const ContactPage = React.createClass({
                 <h4>Preferred Contact Method</h4>
             </ReactBS.Col>
             <ReactBS.Col xs={6} md={3}>
-              <select value={this.state.value} onChange={this.handleOption.bind(null, this.value)}>
+              <select value={contactPreference} onChange={this.handleOption.bind(null, 'contactPreference')}>
                 <option value = "Email">Email</option>
                 <option value = "Phone">Phone</option>
               </select>

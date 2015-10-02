@@ -1,15 +1,15 @@
 import React from 'react';
 import * as ReactBS from 'react-bootstrap';
-import {Navigation} from 'react-router';
+import {Navigation, Router} from 'react-router';
 
 const HomePage = React.createClass({
   mixins : [Navigation],
   componentDidMount() {
-
-    if(window.location.href.indexOf("?userid=1") == -1)
+    var {userid} = this.context.router.getCurrentQuery();
+    if(userid != 1)
     {
       //router.transitionTo('/');
-      this.transitionTo('/');
+      this.replaceWith('/');
       console.log(this.context);
     }
 

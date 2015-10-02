@@ -5,19 +5,19 @@ const HomePage = React.createClass({
 
   getInitialState() {
    return {
-     hero: false
+     isHero: false
    };
  },
 
  handleClick: function(event) {
-     this.setState({hero: !this.state.hero});
+     this.setState({isHero: !this.state.isHero});
    },
 
   render() {
-    let hero = this.state.hero;
-    var heroorname = this.state.hero ? "Slam Fu" : "Adam Wayne Lew";
-    var adamtitle = this.state.hero ? '"The Obsidian Meteor"' : '"Software Developer"';
-    var adampiclbl = this.state.hero ? "http://www.cropmyimage.net/images/162f5cdb-fc92-4723-bb18-87a1d34e543b/dragoon__final_fantasy_xiv__by_fredjully-d656b31.jpg" : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/093/2fd/20b6703.jpg";
+    let isHero = this.state.isHero;
+    var heroorname = this.state.isHero ? "Slam Fu" : "Adam Wayne Lew";
+    var adamtitle = this.state.isHero ? '"The Obsidian Meteor"' : '"Software Developer"';
+    var adampiclbl = this.state.isHero ? "http://www.cropmyimage.net/images/162f5cdb-fc92-4723-bb18-87a1d34e543b/dragoon__final_fantasy_xiv__by_fredjully-d656b31.jpg" : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/093/2fd/20b6703.jpg";
     return (
 
       <div>
@@ -62,7 +62,7 @@ const HomePage = React.createClass({
               </ReactBS.ListGroup>
           </ReactBS.Row>
           <ReactBS.Row>
-            <ReactBS.Button bsStyle="primary" bsSize="large" active onClick={this.handleClick}>{this.state.hero ? "Day Job" : "Night Job"}</ReactBS.Button>
+            <ReactBS.Button bsStyle="primary" bsSize="large" active onClick={this.handleClick}>{this.state.isHero ? "Day Job" : "Night Job"}</ReactBS.Button>
           </ReactBS.Row>
         </ReactBS.Grid>
 
