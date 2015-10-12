@@ -22,10 +22,7 @@
     "glob": "^5.0.15",
     "hapi": "^10.4.1",
     "html-webpack-plugin": "^1.5.2",
-<<<<<<< HEAD
-=======
     "inert": "^3.1.0",
->>>>>>> 460c00d28e721b2bdca308f702c7aaa49520b72f
     "lodash": "^3.10.1",
     "node-sass": "^3.2.0",
     "react": "^0.13.1",
