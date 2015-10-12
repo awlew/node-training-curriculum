@@ -1,7 +1,7 @@
 ESLINT = node_modules/.bin/eslint
 WEBPACK = node_modules/webpack/bin/webpack.js
 
-.PHONY: build install clean dev
+.PHONY: build install clean dev client
 
 build:
 	make clean
@@ -20,3 +20,6 @@ clean:
 
 lint:
 	$(ESLINT) --ext .js --ext .jsx .
+
+client:
+	nf run node index.js webpack
