@@ -17,7 +17,7 @@ const HomePage = React.createClass({
     let isHero = this.state.isHero;
     var heroorname = this.state.isHero ? "Slam Fu" : "Adam Wayne Lew";
     var adamtitle = this.state.isHero ? '"The Obsidian Meteor"' : '"Software Developer"';
-    var adampiclbl = this.state.isHero ? "http://www.cropmyimage.net/images/162f5cdb-fc92-4723-bb18-87a1d34e543b/dragoon__final_fantasy_xiv__by_fredjully-d656b31.jpg" : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/093/2fd/20b6703.jpg";
+    var adampiclbl = this.state.isHero ? "http://imagizer.imageshack.us/v2/150x100q90/911/P5PKKR.png" : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/093/2fd/20b6703.jpg";
     return (
 
       <div>
@@ -36,7 +36,7 @@ const HomePage = React.createClass({
             <h4>Top 6 Skills</h4>
             <ReactBS.ListGroup>
               <ReactBS.ListGroupItem>Service and Object Oriented Programming(CSS, JS, C/C++, Java)</ReactBS.ListGroupItem>
-              <ReactBS.ListGroupItem>Web Forms and Applications development</ReactBS.ListGroupItem>
+              <ReactBS.ListGroupItem>Web Forms and Applications development (React and lodash)</ReactBS.ListGroupItem>
               <ReactBS.ListGroupItem>Embedded Systems Programming</ReactBS.ListGroupItem>
               <ReactBS.ListGroupItem>Hardware Synthesis</ReactBS.ListGroupItem>
               <ReactBS.ListGroupItem>Assembly Level Programming (MIPS and 64000 ARCH)</ReactBS.ListGroupItem>

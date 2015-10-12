@@ -13,6 +13,7 @@ const ContainerLayout = React.createClass({
         <Link to={`blog`}><ReactBS.Button bsStyle="primary" bsSize="large" active>Blog</ReactBS.Button></Link>
         <Link to={`skills`}><ReactBS.Button bsStyle="primary" bsSize="large" active>Skills</ReactBS.Button></Link>
         <Link to={`reactskills`}><ReactBS.Button bsStyle="primary" bsSize="large" active>React Skills</ReactBS.Button></Link>
+        <Link to={`lodashskills`}><ReactBS.Button bsStyle="primary" bsSize="large" active>lodash</ReactBS.Button></Link>
         <Link to={`contact`}><ReactBS.Button bsStyle="primary" bsSize="large" active>Contact</ReactBS.Button></Link>
         <Link to={`topsecret`}><ReactBS.Button bsStyle="primary" bsSize="large" active>TOP SECRET</ReactBS.Button></Link>
 
