@@ -22,19 +22,31 @@ const ContactPage = React.createClass({
     },
 
   handleClick : function(event) {
-        this.setState({submitlbl : 'Thank you ' + this.state.firstname + ' ' + this.state.lastname +
-          ' for submitting, I will contact you shortly at ' +
-          (this.state.option ?  this.state.emailaddr : this.state.phoneno) + '.'});
-      },
+    let validated = true;
+    if (this.state.option && this.state.emailaddr.indexOf('@') <= -1) {
+      this.setState({submitlbl :
+      'You have enterred an invalid email format. EX: (you@domain.com)'});
+      validated = false;
+    }
+    if (!this.state.option && (this.state.phoneno.length != 10 || isNaN(this.state.phoneno))) {
+      this.setState({submitlbl : 'You have enterred an invalid phone number format.'});
+      validated = false;
+    }
+    if (validated) {
+      this.setState({submitlbl : 'Thank you ' + this.state.firstname + ' ' + this.state.lastname +
+            ' for submitting, I will contact you shortly at ' +
+            (this.state.option ?  this.state.emailaddr : this.state.phoneno) + '.'});
+    }
+  },
 
   render() {
-    var firstname = this.state.firstname;
-    var lastname = this.state.lastname;
-    var emailaddr = this.state.emailaddr;
-    var phoneno = this.state.phoneno;
-    var submitlbl = this.state.submitlbl;
-    var contactPreference = this.state.contactPreference;
-    var option = this.state.option;
+    const firstname = this.state.firstname;
+    const lastname = this.state.lastname;
+    const emailaddr = this.state.emailaddr;
+    const phoneno = this.state.phoneno;
+    const submitlbl = this.state.submitlbl;
+    const contactPreference = this.state.contactPreference;
+    const option = this.state.option;
 
     return (
 
@@ -81,7 +93,7 @@ const ContactPage = React.createClass({
                 <h4>Your Phone Number</h4>
             </ReactBS.Col>
             <ReactBS.Col xs={6} md={3}>
-              <input type="text" value={phoneno} placeholder = "(XXX)-XXX-XXXX"
+              <input type="text" value={phoneno} placeholder = "XXXXXXXXXX"
                 onChange={this.handleChange.bind(null, 'phoneno')} />
             </ReactBS.Col>
           </ReactBS.Row>
