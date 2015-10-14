@@ -5,6 +5,7 @@ require('babel/register')({
 var program = require('commander');
 
 require('./commands/webpack-dev-server')(program);
+require('./commands/web')(program);
 
 program.parse(process.argv);
 
